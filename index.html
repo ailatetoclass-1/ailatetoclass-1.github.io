@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Link Search</title>
+</head>
+<body>
+  <h1>Search Links</h1>
+  <input type="text" id="search" placeholder="Search..." />
+  <ul id="results"></ul>
+
+  <script>
+    let links = [];
+
+    // Load the txt file
+    fetch('data.txt')
+      .then(response => response.text())
+      .then(text => {
+        links = text.split('\n').filter(line => line.trim() !== '');
+      });
+
+    // Handle search
+    document.getElementById('search').addEventListener('input', function() {
+      const query = this.value.toLowerCase();
+      const filtered = links.filter(link => link.toLowerCase().includes(query));
+      
+      const resultList = document.getElementById('results');
+      resultList.innerHTML = '';
+      filtered.forEach(link => {
+        const li = document.createElement('li');
+        li.innerHTML = `<a href="${link}" target="_blank">${link}</a>`;
+        resultList.appendChild(li);
+      });
+    });
+  </script>
+</body>
+</html>
