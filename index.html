@@ -10,28 +10,35 @@
   <ul id="results"></ul>
 
   <script>
-    let links = [];
+  let entries = [];
 
-    // Load the txt file
-    fetch('data.txt')
-      .then(response => response.text())
-      .then(text => {
-        links = text.split('\n').filter(line => line.trim() !== '');
-      });
-
-    // Handle search
-    document.getElementById('search').addEventListener('input', function() {
-      const query = this.value.toLowerCase();
-      const filtered = links.filter(link => link.toLowerCase().includes(query));
-      
-      const resultList = document.getElementById('results');
-      resultList.innerHTML = '';
-      filtered.forEach(link => {
-        const li = document.createElement('li');
-        li.innerHTML = `<a href="${link}" target="_blank">${link}</a>`;
-        resultList.appendChild(li);
+  fetch('data.txt')
+    .then(res => res.text())
+    .then(text => {
+      entries = text.split('\n').filter(line => line.trim() !== '').map(line => {
+        const [tag, urls] = line.split('|');
+        return {
+          tag: tag.trim().toLowerCase(),
+          urls: urls.trim().split(/\s+/)  // split by spaces into an array
+        };
       });
     });
-  </script>
+
+  document.getElementById('search').addEventListener('input', function() {
+    const query = this.value.toLowerCase();
+    const resultList = document.getElementById('results');
+    resultList.innerHTML = '';
+
+    entries.forEach(entry => {
+      if (entry.tag.includes(query)) {
+        const li = document.createElement('li');
+        li.innerHTML = `<strong>${entry.tag}</strong>:<br>` +
+          entry.urls.map(url => `<a href="${url}" target="_blank">${url}</a>`).join('<br>');
+        resultList.appendChild(li);
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
