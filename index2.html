@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Link Search</title>
+  <style>
+    body { font-family: sans-serif; max-width: 700px; margin: auto; padding: 20px; }
+    input { width: 100%; padding: 10px; font-size: 1.2em; margin-bottom: 20px; }
+    li { margin: 6px 0; }
+    a { color: #3366cc; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <h1>Link Search</h1>
+  <input type="text" id="search" placeholder="Type a category like 'audio'..." />
+  <ul id="results"></ul>
+
+  <script>
+    let entries = [];
+
+    fetch('data.txt')
+      .then(res => res.text())
+      .then(text => {
+        entries = text.split('\n').filter(line => line.trim() !== '').map(line => {
+          const [tag, urls] = line.split('|');
+          return {
+            tag: tag.trim().toLowerCase(),
+            urls: urls.trim().split(/\s+/) // split URLs by space
+          };
+        });
+      });
+
+    document.getElementById('search').addEventListener('input', function() {
+      const query = this.value.toLowerCase();
+      const resultList = document.getElementById('results');
+      resultList.innerHTML = '';
+
+      entries.forEach(entry => {
+        if (entry.tag.includes(query)) {
+          entry.urls.forEach(url => {
+            const li = document.createElement('li');
+            li.innerHTML = `<a href="${url}" target="_blank">${url}</a>`;
+            resultList.appendChild(li);
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
