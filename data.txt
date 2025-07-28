@@ -1,3 +1,4 @@
-www.udio.com
-www.suno.com
-www.fish.com
+audio | www.suno.com www.udio.com
+video | https://example.com/video1 https://video.com/clip https://watchnow.com/show
+tools | https://example.com/editor https://toolhub.com/audiofix https://onlineedit.com
+news  | https://news.com/article1 https://updates.com/story
