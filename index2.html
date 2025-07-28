@@ -19,7 +19,7 @@
   <script>
     let entries = [];
 
-    fetch('data.txt')
+    fetch('data2.txt')
       .then(res => res.text())
       .then(text => {
         entries = text.split('\n').filter(line => line.trim() !== '').map(line => {
