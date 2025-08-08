@@ -93,6 +93,22 @@ header p {
 .result-content a:hover {
     text-decoration: underline;
 }
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: #ffcc99;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
 
 footer {
     text-align: center;
@@ -102,3 +118,4 @@ footer {
     font-size: 0.9rem;
     margin-top: 40px;
 }
+
