@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Medieval Europe",
+        "description": "Explore life in medieval times.",
+        "url": "https://en.wikipedia.org/wiki/Medieval_Europe"
+    },
+    {
+        "title": "Crusades",
+        "description": "Learn about the series of religious wars in the Middle Ages.",
+        "url": "https://en.wikipedia.org/wiki/Crusades"
+    },
+    {
+        "title": "Black Death",
+        "description": "The devastating pandemic of the 14th century.",
+        "url": "https://en.wikipedia.org/wiki/Black_Death"
+    }
+]
