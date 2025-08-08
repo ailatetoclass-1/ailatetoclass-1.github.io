@@ -13,6 +13,12 @@ header {
     text-align: center;
 }
 
+.header-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 header h1 {
     margin: 0;
     font-size: 2rem;
@@ -93,12 +99,14 @@ header p {
 .result-content a:hover {
     text-decoration: underline;
 }
+
 .social-links {
-    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-.social-links a {
-    color: #ffffff; /* White for readability */
+.social-links a,
+.social-links a:visited {
+    color: #ffffff; /* White for normal and visited */
     margin: 0 10px;
     text-decoration: none;
     font-weight: bold;
@@ -106,7 +114,7 @@ header p {
 }
 
 .social-links a:hover {
-    color: #ff6600; /* Orange hover */
+    color: #ffcc00; /* Goldish-orange hover */
     text-decoration: underline;
 }
 
@@ -118,5 +126,6 @@ footer {
     font-size: 0.9rem;
     margin-top: 40px;
 }
+
 
 
