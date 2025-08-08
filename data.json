@@ -1,17 +1,103 @@
 [
-    {
-        "title": "Medieval Europe",
-        "description": "Explore life in medieval times.",
-        "url": "https://en.wikipedia.org/wiki/Medieval_Europe"
-    },
-    {
-        "title": "Crusades",
-        "description": "Learn about the series of religious wars in the Middle Ages.",
-        "url": "https://en.wikipedia.org/wiki/Crusades"
-    },
-    {
-        "title": "Black Death",
-        "description": "The devastating pandemic of the 14th century.",
-        "url": "https://en.wikipedia.org/wiki/Black_Death"
-    }
+  {
+    "title": "Realism LoRA",
+    "description": "High-quality realism LoRA model assets on Hugging Face.",
+    "url": "https://huggingface.co/flymy-ai/qwen-image-realism-lora/tree/main/assets"
+  },
+  {
+    "title": "Other Models Collection",
+    "description": "Various Qwen image models in GGUF format.",
+    "url": "https://huggingface.co/city96/Qwen-Image-gguf"
+  },
+  {
+    "title": "Mistral Chat",
+    "description": "Chat with the Mistral AI language model online.",
+    "url": "https://chat.mistral.ai/chat"
+  },
+  {
+    "title": "Qwen Chat",
+    "description": "Access Qwen AI chat interface for conversational AI.",
+    "url": "https://chat.qwen.ai/"
+  },
+  {
+    "title": "AI Studio New Chat",
+    "description": "Create new AI chat prompts on Google AI Studio.",
+    "url": "https://aistudio.google.com/prompts/new_chat"
+  },
+  {
+    "title": "ChatGPT",
+    "description": "Official ChatGPT conversational AI platform.",
+    "url": "https://chatgpt.com/"
+  },
+  {
+    "title": "Ideogram AI",
+    "description": "AI-powered image generation and editing tool.",
+    "url": "https://ideogram.ai/"
+  },
+  {
+    "title": "HiDream AI",
+    "description": "Create AI-generated dreamlike images.",
+    "url": "https://hidream.org/"
+  },
+  {
+    "title": "SeedEdit Chat",
+    "description": "Chat interface for SeedEdit AI model.",
+    "url": "https://seededit.org/chat"
+  },
+  {
+    "title": "FLUX.1 Kontext Dev",
+    "description": "Hugging Face space for FLUX.1 Kontext AI development.",
+    "url": "https://huggingface.co/spaces/black-forest-labs/FLUX.1-Kontext-Dev"
+  },
+  {
+    "title": "FLUX.1 Krea Dev",
+    "description": "Hugging Face space for FLUX.1 Krea AI development.",
+    "url": "https://huggingface.co/spaces/black-forest-labs/FLUX.1-Krea-dev"
+  },
+  {
+    "title": "Recraft AI Projects",
+    "description": "Explore AI projects on Recraft platform.",
+    "url": "https://www.recraft.ai/projects"
+  },
+  {
+    "title": "Discord",
+    "description": "Join the global community platform Discord.",
+    "url": "https://discord.com/"
+  },
+  {
+    "title": "Midjourney",
+    "description": "AI-powered image generation and creativity platform.",
+    "url": "https://www.midjourney.com/"
+  },
+  {
+    "title": "Workflows Folder",
+    "description": "Google Drive folder with workflows and resources.",
+    "url": "https://drive.google.com/drive/folders/13dGZpbYOtJzpk5wdpnQ5DMae_7Ikhtei?usp=drive_link"
+  },
+  {
+    "title": "Blip AI",
+    "description": "Hugging Face space for BLIP 3o model.",
+    "url": "https://huggingface.co/spaces/BLIP3o/blip-3o"
+  },
+  {
+    "title": "Florence-2",
+    "description": "AI project hosted on Hugging Face spaces.",
+    "url": "https://huggingface.co/spaces/gokaygokay/Florence-2"
+  },
+  {
+    "title": "CLIP-Interrogator-2",
+    "description": "Tool to interrogate images using CLIP model.",
+    "url": "https://huggingface.co/spaces/fffiloni/CLIP-Interrogator-2"
+  },
+  {
+    "title": "Qwen Image Models (GGUF)",
+    "description": "Collection of Qwen image models on Hugging Face.",
+    "url": "https://huggingface.co/city96/Qwen-Image-gguf/tree/main"
+  },
+  {
+    "title": "ComfyUI",
+    "description": "Modular GUI for AI workflows hosted on GitHub.",
+    "url": "https://github.com/comfyanonymous/ComfyUI"
+  }
 ]
+
