@@ -32,15 +32,15 @@ document.addEventListener("DOMContentLoaded", () => {
             card.classList.add("result-card");
 
             card.innerHTML = `
-                <div class="result-image">Image Placeholder</div>
-                <div class="result-content">
-                    <h3>${item.title}</h3>
-                    <p>${item.description}</p>
-                    <a href="${item.url}" target="_blank">Go to Link</a>
-                </div>
-            `;
+    <div class="result-content">
+        <h3>${item.title}</h3>
+        <p>${item.description}</p>
+        <a href="${item.url}" target="_blank">Go to Link</a>
+    </div>
+`;
 
             resultsContainer.appendChild(card);
         });
     });
 });
+
