@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Late to Class - Prompt Director</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d0d0d;
+            color: #e5e5e5;
+            overflow-x: hidden;
+        }
+
+        /* Custom Gradients and Glows */
+        .text-gradient {
+            background: linear-gradient(90deg, #00d4ff, #9c27b0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .glow-button {
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+        }
+        
+        .glow-button:hover {
+            box-shadow: 0 0 25px rgba(0, 212, 255, 0.6);
+            transform: translateY(-2px);
+        }
+
+        .glass-card {
+            background: rgba(30, 30, 30, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            transition: transform 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 212, 255, 0.3);
+        }
+
+        /* Image Placeholder Box */
+        .img-placeholder {
+            background-color: #1a1a1a;
+            border: 2px dashed #444;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            text-align: center;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .img-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="fixed w-full z-50 bg-[#0d0d0d]/80 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-xl font-bold tracking-tighter flex items-center gap-3">
+                <div class="w-10 h-10 rounded bg-gray-800 border border-gray-700 flex items-center justify-center overflow-hidden relative">
+                    <span class="text-xs text-gray-500"></span>
+                    <img src="late2.jpg" >
+                </div>
+                <span class="text-[#ffa500]">AI<span class="text-[#00d4ff]">LateToClass</span></span>
+            </div>
+            <a href="https://www.patreon.com/posts/prompt-director-150726418?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link" class="bg-[#00d4ff] text-black px-6 py-2 rounded-full font-bold glow-button text-sm uppercase tracking-wide">
+                Buy App
+            </a>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-20 px-6 max-w-7xl mx-auto text-center">
+        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6">
+            Prompt Director Pro. <br>
+            <span class="text-gradient">Long prompts that count.</span>
+        </h1>
+        <p class="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
+            The ultimate AI Prompt Director for Qwen, Z-Image, Seedream, Nano Banana, Flux, Midjourney,  Wan 2.2, LTX2, Kling 3, Seedance 2.0, Vidu Q3, Veo 3.1, Sora 2, Runway 4.5, Pixverse 5.5, Hailuo 2.3, Ray 3
+. 440 cinematic options, camera lenses, and art styles at your fingertips.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+            <a href="https://youtu.be/BhS1qGhDL6c?si=3Vc8Nhn24c-4i0UP" class="bg-[#00d4ff] text-black px-8 py-4 rounded-lg font-bold text-lg glow-button">
+                watch youtube
+            </a>
+            <a href="#features" class="bg-transparent border border-gray-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-800 transition">
+                See Features
+            </a>
+        </div>
+
+        <div class="w-full h-64 md:h-96 img-placeholder shadow-2xl shadow-cyan-900/20">
+            <svg class="w-12 h-12 mb-2 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+            <span class="text-sm">Main App Screenshot or Hero Image (1200x600)</span>
+            <img src="app-pic.png" alt="Hero Image" onerror="this.style.display='none'">
+        </div>
+    </section>
+
+    <section id="features" class="py-20 bg-[#121212] px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Built for <span class="text-[#9c27b0]">Creators</span></h2>
+                <p class="text-gray-400">Everything you need to get the exact AI generation you see in your head.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 text-center">
+                    <div class="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl border border-gray-700">🎥</div>
+                    <h3 class="text-xl font-bold mb-3 text-white">440 Cinematic Options</h3>
+                    <p class="text-gray-400 text-sm">Stop guessing terminology. Select from professional camera bodies, lenses, focal lengths, and Hollywood lighting setups.</p>
+                </div>
+                <div class="glass-card p-8 text-center">
+                    <div class="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl border border-gray-700">💾</div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Save & Load Presets</h3>
+                    <p class="text-gray-400 text-sm">Find a style you love? Save your exact combination of settings as a JSON file and load it back up anytime you need it.</p>
+                </div>
+                <div class="glass-card p-8 text-center">
+                    <div class="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl border border-gray-700">🎲</div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Instant Inspiration</h3>
+                    <p class="text-gray-400 text-sm">Hit writer's block? Use the Randomize button to mix and match crazy art styles, textures, and video movements instantly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 max-w-7xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">See the Results</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            
+            <div>
+                <div class="h-64 img-placeholder rounded-xl mb-4 shadow-lg">
+                    <span class="text-sm">Example AI Image 1 (e.g. Cyberpunk)</span>
+                    <img src="womanred.webp" alt="Example 1" onerror="this.style.display='none'">
+                </div>
+                <p class="text-sm text-[#00d4ff] font-mono bg-gray-900 p-3 rounded border border-gray-800">
+                    "a beautiful woman in a red sun dress, Digital Illustration, Fujifilm Superia 400 (Green/Magenta Shift), Monochrome (Single Color Shades), Rough / Coarse (Sandpaper / Stone), Abstract Fractal World (Trippy / Geometry), Sandstorm (Beige Haze / Gritty), iPhone 15 Pro Max (Mobile Photography / Smart HDR), 24mm Wide (Cinema Standard Establishing Shot), Super 35 (The Hollywood Standard), Probe Lens (Bug's Eye View / Inside Objects), f/1.2 (Creamy Bokeh / Noctilux Look), Symmetrical Center Frame (Wes Anderson Style), Dolly Zoom (Vertigo Effect / Background Warp), God Rays / Crepuscular Rays (Volumetric Beams through Fog), Stormy & Dark (Thunderclouds / Ominous)"
+                </p>
+            </div>
+
+            <div>
+                <div class="h-64 img-placeholder rounded-xl mb-4 shadow-lg">
+                    <span class="text-sm">Example AI Image 2 (e.g. Cinematic/Macro)</span>
+                    <img src="image-16.webp" alt="Example 2" onerror="this.style.display='none'">
+                </div>
+                <p class="text-sm text-[#9c27b0] font-mono bg-gray-900 p-3 rounded border border-gray-800">
+                    "a real life dragon with a castle in the background, CCTV Security Footage, Fujifilm Superia 400 (Green/Magenta Shift), Earth Tones (Brown / Green / Beige / Natural), Gritty / Dirty (Street / Industrial), Infinite White Background (Product Photography), Chaotic (High Energy / Motion Blur), Leica M11 (Street Photography / High Contrast), 100mm Macro (Detail / Insects / Texture), Super 8mm (Home Movie / Nostalgic / Soft), Helios 44-2 58mm (Swirly Bokeh / Dreamy), f/22 (Landscape / Sunstars on Lights), Macro Shot (Microscopic / Texture Focus), POV (First Person / Eyes of Character), Hard Key Light (Noir / Sharp Shadows), Liminal Space (Empty / Unsettling / Backrooms)"
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="app-section" class="py-20 bg-black px-6 border-t border-gray-800">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">Ready to Direct?</h2>
+            <p class="text-gray-400 mb-10">Click on the button below to start generating your prompts.</p>
+            
+            <a href="https://www.patreon.com/posts/prompt-director-150726418?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link" target="_blank" class="inline-block bg-gradient-to-r from-[#00d4ff] to-[#9c27b0] text-white px-10 py-5 rounded-xl font-bold text-2xl hover:scale-105 transition shadow-2xl shadow-purple-900/30">
+                Launch Prompt Director 🚀
+            </a>
+
+            <p class="mt-8 text-sm text-gray-600">No subscription just a one of payment and then download.</p>
+        </div>
+    </section>
+
+    <footer class="py-8 bg-[#0a0a0a] border-t border-gray-800 text-center text-gray-500 text-sm">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center px-6">
+            <p>© 2026 AI Late to Class. All rights reserved.</p>
+            <div class="flex gap-4 mt-4 md:mt-0">
+                <a href="#" class="hover:text-[#00d4ff] transition">Twitter / X</a>
+                <a href="#" class="hover:text-[#00d4ff] transition">Reddit</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</h
